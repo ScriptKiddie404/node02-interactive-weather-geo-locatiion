@@ -36,15 +36,15 @@ const menu = async () => {
             choices: [
                 {
                     value: 1,
-                    name: `${'1. '.blue} Option 1`,
+                    name: `${'1. '.blue} Search city`,
                 },
                 {
                     value: 2,
-                    name: `${'2. '.blue} Option 2`
+                    name: `${'2. '.blue} Search history`
                 },
                 {
                     value: 3,
-                    name: `${'3. '.blue} Option 3`
+                    name: `${'3. '.blue} Exit`
                 }
             ]
         }

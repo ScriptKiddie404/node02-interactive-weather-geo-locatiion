@@ -12,19 +12,18 @@ const { readInput, menu, pause } = require("./helpers/inquirer");
 
         option = await menu();
 
+        if (option !== 3) await pause(); //Hacer una pausa sólo si la opción seleccionada no es la de salida.
+
         switch (option) {
 
             case 1:
                 console.log(option);
-                await pause();
                 break;
             case 2:
                 console.log(option);
-                await pause();
                 break;
             case 3:
                 console.log(option);
-                await pause();
                 break;
 
             default:
@@ -34,5 +33,6 @@ const { readInput, menu, pause } = require("./helpers/inquirer");
 
     } while (option !== 3);
 
-
+    console.clear();
+    
 })();
