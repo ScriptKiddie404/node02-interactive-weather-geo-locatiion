@@ -15,3 +15,9 @@ Once you install the dependencies it is only necessary to execute
 ```bash
 npm start
 ```
+
+Or with the command:
+
+```bash
+node app.js
+```
