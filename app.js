@@ -1,6 +1,6 @@
 const { readInput, menu, pause } = require("./helpers/inquirer");
 
-
+const axios = require('axios').default;
 
 
 
@@ -12,12 +12,25 @@ const { readInput, menu, pause } = require("./helpers/inquirer");
 
         option = await menu();
 
-        if (option !== 3) await pause(); //Hacer una pausa sólo si la opción seleccionada no es la de salida.
+        // if (option !== 3) await pause(); //Hacer una pausa sólo si la opción seleccionada no es la de salida.
 
         switch (option) {
 
             case 1:
-                console.log(option);
+                // TODO: Mostrar mensaje (read input)
+                const city = await readInput('Enter the city: ');
+                
+                await pause();
+
+                // TODO: Buscar los lugares.
+
+                // TODO: Seleccionar un lugar.
+
+                // TODO: Clima
+
+                // TODO: Mostrar resultados
+
+                // 
                 break;
             case 2:
                 console.log(option);
@@ -34,5 +47,5 @@ const { readInput, menu, pause } = require("./helpers/inquirer");
     } while (option !== 3);
 
     console.clear();
-    
+
 })();

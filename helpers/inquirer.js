@@ -3,6 +3,8 @@ require('colors');
 
 const readInput = async (message = '') => {
 
+    console.clear();
+
     const question = [
         {
             type: 'input',
