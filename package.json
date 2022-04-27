@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ScriptKiddie404/node02-interactive-weather-geo-locatiion/issues"
   },
-  "homepage": "https://github.com/ScriptKiddie404/node02-interactive-weather-geo-locatiion#readme"
+  "homepage": "https://github.com/ScriptKiddie404/node02-interactive-weather-geo-locatiion#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.2.3"
+  }
 }
