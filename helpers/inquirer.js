@@ -3,7 +3,7 @@ require('colors');
 
 const readInput = async (message = '') => {
 
-    console.clear();
+    console.clear()
 
     const question = [
         {

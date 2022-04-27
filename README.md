@@ -8,7 +8,7 @@ The list of dependencies uses is as follows:
 + Colors
 + Inquirer
 + Axios
-
+****
 ## How to install.
 
 It is only necessary to have node.js installed, once installed the repository is cloned, the folder is entered through the console and the command is executed:

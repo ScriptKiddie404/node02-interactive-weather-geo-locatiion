@@ -1,12 +1,13 @@
 const { readInput, menu, pause } = require("./helpers/inquirer");
+const Search = require("./models/Search");
 
 const axios = require('axios').default;
-
 
 
 (async () => {
 
     let option;
+    const search = new Search();
 
     do {
 
@@ -17,8 +18,9 @@ const axios = require('axios').default;
         switch (option) {
 
             case 1:
-                // TODO: Mostrar mensaje (read input)
+
                 const city = await readInput('Enter the city: ');
+                const cities = await search.getCities(city);
                 
                 await pause();
 
