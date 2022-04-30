@@ -8,7 +8,12 @@ The list of dependencies uses is as follows:
 + Colors
 + Inquirer
 + Axios
-****
+
+## API's
++ https://docs.mapbox.com/
++ https://openweathermap.org/api
+
+
 ## How to install.
 
 It is only necessary to have node.js installed, once installed the repository is cloned, the folder is entered through the console and the command is executed:

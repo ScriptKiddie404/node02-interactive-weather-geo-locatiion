@@ -7,7 +7,7 @@ class ApiRequests {
 
     params = {
         'access_token': process.env.MAPBOX_KEY,
-        'limit': 10,
+        'limit': 8,
         'language': 'es'
     }
 
