@@ -19,12 +19,10 @@ const axios = require('axios').default;
 
             case 1:
 
+                // TODO: Buscar los lugares.
                 const city = await readInput('Enter the city: ');
                 const cities = await search.getCities(city);
-                
                 await pause();
-
-                // TODO: Buscar los lugares.
 
                 // TODO: Seleccionar un lugar.
 
