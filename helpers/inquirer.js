@@ -18,7 +18,8 @@ const readInput = async (message = '') => {
         }
     ];
 
-    const { description } = await inquirer.prompt(question)
+    const { description } = await inquirer.prompt(question);
+    console.clear();
 
     return description;
 
@@ -32,7 +33,6 @@ const menu = async () => {
         {
             type: 'list',
             name: 'option',
-            message: 'Select an option',
             choices: [
                 {
                     value: 1,
@@ -103,6 +103,8 @@ const menuOfCities = async (cities = []) => {
 
 
     const { id } = await inquirer.prompt(questions);
+
+    console.clear();
 
     return id;
 
