@@ -1,5 +1,6 @@
 const ApiRequests = require('./mapboxapi');
 const WeatherRequests = require('./weatherapi');
+const db = require('../helpers/database');
 
 class Search {
 
@@ -8,6 +9,8 @@ class Search {
 
     constructor() {
         this.mapBoxApi = new ApiRequests();
+        // !! En caso de que haya algo en la BD lo leemos.
+        this.searchHistory = db.readDB();
     }
 
     async getCities(city = '') {
@@ -52,6 +55,21 @@ class Search {
             throw error;
         }
 
+    }
+
+    saveHistory(cities = [], selectedID = '') {
+
+        const city = cities.find(city => city.id === selectedID);
+        this.searchHistory.unshift(city.name);
+        //!! Guardamos el historial en la BD.
+
+        db.saveDB(this.searchHistory);
+
+
+    }
+
+    get history() {
+        return this.searchHistory;
     }
 
 }

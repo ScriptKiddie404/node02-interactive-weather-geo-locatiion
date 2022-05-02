@@ -37,7 +37,20 @@ const printInformation = (cities = [], id = '', weatherResponse) => {
     console.log('Description: ', description);
 }
 
+const printHistory = (history = []) => {
+
+    console.clear();
+    printHeader('Search history');
+
+    history.forEach((item, i) => {
+        const actualIndex = `${i + 1}.`.blue;
+        console.log(`${actualIndex} ${item}`);
+    });
+
+}
+
 module.exports = {
     printInformation,
-    printHeader
+    printHeader,
+    printHistory
 }
