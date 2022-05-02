@@ -5,11 +5,11 @@ class Search {
 
     searchHistory = [];
     mapBoxApi;
-    weatherApi;
+    // weatherApi;
 
     constructor() {
         this.mapBoxApi = new ApiRequests();
-        this.weatherApi = new WeatherRequests();
+        // this.weatherApi = new WeatherRequests();
     }
 
     async getCities(city = '') {
@@ -36,9 +36,19 @@ class Search {
     async getWeather(latitude = 0, longitude = 0) {
 
         try {
-            this.weatherApi.setLatitudeLongitude(latitude, longitude);
-            const response = await this.weatherApi.fetchWeather();
-            return response.data;
+
+            const weatherApi = new WeatherRequests(latitude, longitude);
+            const response = await (await weatherApi.fetchWeather()).data;
+            const { main, weather } = response;
+            return {
+                description: weather[0].description,
+                temperature: main.temp,
+                termic_sensation: main.feels_like,
+                temperature_min: main.temp_min,
+                temperature_max: main.temp_max,
+                pressure: main.pressure,
+                humidity: main.humidity
+            }
 
         } catch (error) {
             throw error;

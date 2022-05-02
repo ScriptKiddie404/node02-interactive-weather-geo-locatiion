@@ -26,16 +26,16 @@ const Search = require("./models/Search");
                 //!! obtener la latitud y la longitud de la ciudad seleccionada:
                 const citySelected = cities.find(city => city.id === selectedID);
                 const { latitude, longitude } = citySelected;
-                // console.log('a'.red, latitude, longitude);
-                const response = await search.getWeather(latitude, longitude);
-                console.log(response);
-                // const respuesta = search.getWeather(latitude, longitude);
-                // console.log(respuesta);
-                // printInformation(cities, selectedID);
+
+                // !! Obtener información del clima;
+                const weatherResponse = await search.getWeather(latitude, longitude);
+                
+                
+                // !! Mostrar resultados
+                printInformation(cities, selectedID, weatherResponse);
 
 
 
-                // TODO: Mostrar resultados
                 await pause();
 
 

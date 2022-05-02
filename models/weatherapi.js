@@ -15,18 +15,16 @@ class WeatherRequests {
 
     instance; //!! Instance de axios.
 
-    constructor() {
+    constructor(latitude, longitude) {
+
+        this.params.lat = latitude;
+        this.params.lon = longitude;
 
         this.instance = axios.create({
             baseURL: this.baseURL,
             params: this.params
         });
 
-    }
-
-    setLatitudeLongitude(latitude, longitude) {
-        this.params.lat = latitude;
-        this.params.lon = longitude;
     }
 
 
