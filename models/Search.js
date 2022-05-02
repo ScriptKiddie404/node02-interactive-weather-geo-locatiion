@@ -5,11 +5,9 @@ class Search {
 
     searchHistory = [];
     mapBoxApi;
-    // weatherApi;
 
     constructor() {
         this.mapBoxApi = new ApiRequests();
-        // this.weatherApi = new WeatherRequests();
     }
 
     async getCities(city = '') {
